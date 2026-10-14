@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Loong</title>
+<meta name="description" content="Loong —— 由 GitHub Pages 托管的静态站点。" />
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要内容</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="./">
+      <span class="brand-mark" aria-hidden="true">L</span>
+      <span class="brand-text">Loong</span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a href="#start">开始</a>
+      <a href="#deploy">部署</a>
+      <a href="https://github.com/lntunailong/lntunailong.github.io" target="_blank" rel="noopener">仓库 ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">GitHub Pages · 组织根站点</p>
+      <h1 class="hero-title">站点已上线，<span class="grad">就等你的内容</span></h1>
+      <p class="hero-sub">
+        这个仓库已经接好自动部署流水线。把 HTML、CSS、图片丢进来，推到 <code>main</code> 分支，
+        几十秒后线上就是最新的。
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#start">看看怎么加内容</a>
+        <a class="btn btn-ghost" href="https://github.com/lntunailong/lntunailong.github.io" target="_blank" rel="noopener">打开仓库</a>
+      </div>
+      <p class="hero-url">
+        线上地址：<a href="https://lntunailong.github.io/">https://lntunailong.github.io/</a>
+      </p>
+    </div>
+  </section>
+
+  <section id="start" class="section">
+    <div class="wrap">
+      <h2 class="section-title">三步换成你自己的站</h2>
+      <div class="grid">
+        <article class="card">
+          <span class="card-num">01</span>
+          <h3>放文件</h3>
+          <p>在仓库根目录放入 <code>index.html</code>、<code>assets/</code>、图片等静态文件。子目录也行，会自动一起发布。</p>
+        </article>
+        <article class="card">
+          <span class="card-num">02</span>
+          <h3>推上去</h3>
+          <p>提交并推送到 <code>main</code> 分支。每次推送都会自动触发一次部署。</p>
+        </article>
+        <article class="card">
+          <span class="card-num">03</span>
+          <h3>等几十秒</h3>
+          <p>在仓库的 <strong>Actions</strong> 标签页能看到进度，变绿后刷新网址即可看到新内容。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="deploy" class="section section-alt">
+    <div class="wrap">
+      <h2 class="section-title">部署是怎么跑的</h2>
+      <p class="lead">
+        发布流程写在 <code>.github/workflows/pages.yml</code>，用的是 GitHub 官方的 Pages 动作，
+        不需要你在本地装任何构建工具。
+      </p>
+      <ul class="facts">
+        <li><span>发布内容</span>整个仓库根目录</li>
+        <li><span>自动排除</span><code>.git</code> 与 <code>.github</code></li>
+        <li><span>触发条件</span>推送到 <code>main</code>，或手动运行</li>
+        <li><span>无需构建</span>纯静态文件，直接发布</li>
+      </ul>
+      <p class="note">
+        想放以点开头的隐藏文件（例如 <code>.well-known/</code>）？在
+        <code>pages.yml</code> 的 upload 步骤里加上 <code>include-hidden-files: true</code>。
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p>© <span id="year">2026</span> Loong</p>
+    <p class="muted">Hosted on <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a></p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
